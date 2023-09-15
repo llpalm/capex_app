@@ -17,12 +17,13 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 st.set_page_config (page_title="Modelagem Financeira Capex" )
 st.title('Cadastro')
 
-st.sidebar.success('Menu de Navegação')
-
 @st.cache_data
 def carregar_dados():
         suporte = pd.read_excel("Analise_Fim.xlsx")
         return suporte
+
+st.sidebar.success('Menu de Navegação')
+
 
 with st.form(key='Cadastrar'):
     nome_projeto = st.text_input('Nome do Projeto')
