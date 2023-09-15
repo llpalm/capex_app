@@ -22,7 +22,7 @@ arquivo = st.file_uploader(
         type=['xlsx']
 )
 
-print(arquivo.type)
+print(arquivo.xlsx)
 # @st.cache_data
 # def carregar_dados():
 #         suporte = pd.read_excel("Analise_Fim.xlsx")
