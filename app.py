@@ -22,7 +22,7 @@ def carregar_dados():
         suporte = pd.read_excel("Analise_Fim.xlsx")
         return suporte
 
-st.sidebar.success('Menu de Navegação')
+#st.sidebar.success('Menu de Navegação')
 
 
 # with st.form(key='Cadastrar'):
