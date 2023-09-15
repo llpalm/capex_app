@@ -614,7 +614,7 @@ st.sidebar.success('Menu de Navegação')
 #         st.metric(label='Total TIR', value=mtir)
 
 
-st.button('Calcular', on_click=soma)
+# st.button('Calcular', on_click=soma)
 
 
 
