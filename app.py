@@ -48,12 +48,12 @@ with st.form(key='Cadastrar'):
     beneficio = st.text_area("Beneficios", height=100)
 
     add_suporte = st.form_submit_button('Cadastrar')
-    # if add_suporte:
-    #     #st.write(nome_projeto, natureza)
-    #     new_add_suporte = {'Nome do Projeto': nome_projeto, 'Natureza': natureza}
-    #     carregar_dados = carregar_dados.append(new_add_suporte, ignore_index=True)
-    #     # st.write(suporte)
-    #     carregar_dados.to_excel('Analise_Teste.xlsx', index=False)
+    if add_suporte:
+        st.write(nome_projeto, natureza)
+        new_add_suporte = {'Nome do Projeto': nome_projeto, 'Natureza': natureza}
+        suporte = suporte.append(new_add_suporte, ignore_index=True)
+        st.write(suporte)
+        suporte.to_excel('Analise_Teste.xlsx', index=False)
 
 
     #valor = st.number_input('Valor do Projeto')
