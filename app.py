@@ -18,10 +18,16 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 # st.title('Cadastro')
 
 arquivo = st.file_uploader(
-        'Suba seu arquivo aqui!'
+        'Suba seu arquivo aqui!',
+        type=["jpng", "csv", "xlsx"]
 )
 
-print(arquivo)
+if arquvo:
+        print(arquivo.type)
+        match arquivo.type.split('/'):
+                case'application', 'json':
+                st.json(loads(arquivo.read()))
+
 # @st.cache_data
 # def carregar_dados():
 #         suporte = pd.read_excel("Analise_Fim.xlsx")
