@@ -25,8 +25,8 @@ arquivo = st.file_uploader(
 if arquivo:
     print(arquivo.type)
     match arquivo.type.split('/'):
-        case 'application', 'json':
-        st.json(loads(arquivo.read()))
+        case 'application', 'xlsx':
+            st.xlsx(loads(arquivo.read()))
 
 # @st.cache_data
 # def carregar_dados():
