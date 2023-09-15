@@ -4,7 +4,7 @@ import numpy as np
 #import numpy_financial as npf
 from datetime import datetime, timedelta
 #from PIL import Image
-import openpyxl
+#import openpyxl
 
 #image = Image.open('Suzano.PNG')
 
