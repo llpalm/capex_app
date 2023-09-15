@@ -15,7 +15,7 @@ st.set_page_config (page_title="Modelagem Financeira Capex", layout='wide')
 st.title('Análise de Viabilidade de Projeto - Capex')
 # Configuração da página 
 #st.set_page_config (page_title="Modelagem Financeira Capex" )
-st.title('Cadastro')
+# st.title('Cadastro')
 
 @st.cache_data
 def carregar_dados():
