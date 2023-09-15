@@ -18,11 +18,11 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 # st.title('Cadastro')
 
 arquivo = st.file_uploader(
-        'Suba seu arquivo aqui!',
-        type=["jpng", "csv", "xlsx"]
+    'Suba seu arquivo aqui!',
+    type=["jpng", "csv", "xlsx"]
 )
 
-if arquvo:
+if arquivo:
         print(arquivo.type)
         match arquivo.type.split('/'):
                 case'application', 'json':
