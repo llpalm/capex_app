@@ -336,7 +336,7 @@ def carregar_dados():
 
 
 
-total_outros_itens = outros_23+outros_24+outros_25+outros_26+outros_27+outros_28+outros_29+outros_30+outros_31+outros_32
+# total_outros_itens = outros_23+outros_24+outros_25+outros_26+outros_27+outros_28+outros_29+outros_30+outros_31+outros_32
 
 # df_outros_itens = pd.DataFrame(columns=['Nome do Projeto', 'Outros Itens FCL Anual-23', 'Outros Itens FCL Anual-24', 'Outros Itens FCL Anual-25', 'Outros Itens FCL Anual-26', 'Outros Itens FCL Anual-27', 'Outros Itens FCL Anual-28', 'Outros Itens FCL Anual-29', 'Outros Itens FCL Anual-30', 'Outros Itens FCL Anual-31', 'Outros Itens FCL Anual-32'])
 # new_df_outros_itens = {"Nome do Projeto": nome_projeto, "Outros Itens FCL Anual-23": float(outros_23), "Outros Itens FCL Anual-24": float(outros_24), "Outros Itens FCL Anual-25": float(outros_25), "Outros Itens FCL Anual-26": float(outros_26), "Outros Itens FCL Anual-27": float(outros_27), "Outros Itens FCL Anual-28": float(outros_28), "Outros Itens FCL Anual-29": float(outros_29), "Outros Itens FCL Anual-30": float(outros_30), "Outros Itens FCL Anual-31": float(outros_31), "Outros Itens FCL Anual-32": float(outros_32)}
