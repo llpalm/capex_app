@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 #image = Image.open('Suzano.PNG')
 
-suporte = pd.read_excel(r'Analise_Fim.xlsx')
+suporte = pd.read_excel('../capex_app/Analise_Fim.xlsx')
 #st.write(suporte)
 st.set_page_config (page_title="Modelagem Financeira Capex", layout='wide')
 st.image(image=image)
