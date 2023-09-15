@@ -19,6 +19,10 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 
 st.sidebar.success('Menu de Navegação')
 
+@st.cache_data
+def carregar_dados():
+        suporte = pd.read_excel("Analise_Fim.xlsx")
+        return suporte
 
 # with st.form(key='Cadastrar'):
 #     nome_projeto = st.text_input('Nome do Projeto')
