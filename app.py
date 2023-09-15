@@ -17,322 +17,322 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 #st.set_page_config (page_title="Modelagem Financeira Capex" )
 st.title('Cadastro')
 
-# @st.cache_data
-# def carregar_dados():
-#         suporte = pd.read_excel("Analise_Fim.xlsx")
-#         return suporte
+@st.cache_data
+def carregar_dados():
+        suporte = pd.read_excel("Analise_Fim.xlsx")
+        return suporte
 
 st.sidebar.success('Menu de Navegação')
 
 
-with st.form(key='Cadastrar'):
-    nome_projeto = st.text_input('Nome do Projeto')
-    col1,col2, col3 = st.columns(3)
-    with col1:
-        natureza = st.selectbox(label='Natureza', options=['Modernização', 'Expansão'])
-    with col2:   
-        diretoria = st.selectbox(label='Diretoria', options=['Florestal', 'Celulose', 'Papel'])
-    with col3:
-        site = st.selectbox(label='Site', options=['ARA', 'MUC', 'TLS', 'LIM'])
-    col4, col5, col6 = st.columns(3)
-    with col4:
-        data_incial = st.date_input('Data Inicial')
-    with col5:
-        data_final = st.date_input('Data Final')
-    with col6:
-        vida_util = st.number_input(label='Vida Util do Equipamento', step=1)
+# with st.form(key='Cadastrar'):
+#     nome_projeto = st.text_input('Nome do Projeto')
+#     col1,col2, col3 = st.columns(3)
+#     with col1:
+#         natureza = st.selectbox(label='Natureza', options=['Modernização', 'Expansão'])
+#     with col2:   
+#         diretoria = st.selectbox(label='Diretoria', options=['Florestal', 'Celulose', 'Papel'])
+#     with col3:
+#         site = st.selectbox(label='Site', options=['ARA', 'MUC', 'TLS', 'LIM'])
+#     col4, col5, col6 = st.columns(3)
+#     with col4:
+#         data_incial = st.date_input('Data Inicial')
+#     with col5:
+#         data_final = st.date_input('Data Final')
+#     with col6:
+#         vida_util = st.number_input(label='Vida Util do Equipamento', step=1)
 
-    objetivo = st.text_area("Objetivo", height=100)
-    escopo = st.text_area("Escopo", height=100)
-    risco = st.text_area("Risco", height=100)
-    beneficio = st.text_area("Beneficios", height=100)
+#     objetivo = st.text_area("Objetivo", height=100)
+#     escopo = st.text_area("Escopo", height=100)
+#     risco = st.text_area("Risco", height=100)
+#     beneficio = st.text_area("Beneficios", height=100)
 
-    add_suporte = st.form_submit_button('Cadastrar')
-    if add_suporte:
-        st.write(nome_projeto, natureza)
-        new_add_suporte = {'Nome do Projeto': nome_projeto, 'Natureza': natureza}
-        suporte = suporte.append(new_add_suporte, ignore_index=True)
-        st.write(suporte)
-        # suporte.to_excel('Analise_Teste.xlsx', index=False)
-
-
-    #valor = st.number_input('Valor do Projeto')
+#     add_suporte = st.form_submit_button('Cadastrar')
+#     if add_suporte:
+#         st.write(nome_projeto, natureza)
+#         new_add_suporte = {'Nome do Projeto': nome_projeto, 'Natureza': natureza}
+#         suporte = suporte.append(new_add_suporte, ignore_index=True)
+#         st.write(suporte)
+#         # suporte.to_excel('Analise_Teste.xlsx', index=False)
 
 
-st.markdown("""
-    # Orçamento - 2023
-    """)
-
-col7, col8, col9, col10, col11, col12 = st.columns(6)
-with col7:
-    jan_23 = st.number_input('Jan-23')
-with col8:
-    fev_23 = st.number_input('Fev-23')
-with col9:
-    mar_23 = st.number_input('Mar-23')
-with col10:
-    abr_23 = st.number_input('Abr-23')
-with col11:
-    mai_23 = st.number_input('Mai-23')
-with col12:
-    jun_23 = st.number_input('Jun-23')
-col13, col14, col15, col16, col17, col18  = st.columns(6)
-with col13:
-    jul_23 = st.number_input('Jul-23')
-with col14:
-    ago_23 = st.number_input('Ago-23')
-with col15:
-    set_23 = st.number_input('Set-23')
-with col16:
-    out_23 = st.number_input('Out-23')
-with col17:
-    nov_23 = st.number_input('Nov-23')
-with col18:
-    dez_23 = st.number_input('Dez-23')
-
-total_orc_23 = jan_23+fev_23+mar_23+abr_23+mai_23+jun_23+jul_23+ago_23+set_23+out_23+nov_23+dez_23
-
-st.markdown("""
-    # Orçamento - 2024
-    """)
-
-col19, col20, col21, col22, col23, col24 = st.columns(6)
-with col19:
-    jan_24 = st.number_input('Jan-24')
-with col20:
-    fev_24 = st.number_input('Fev-24')
-with col21:
-    mar_24 = st.number_input('Mar-24')
-with col22:
-    abr_24 = st.number_input('Abr-24')
-with col23:
-    mai_24 = st.number_input('Mai-24')
-with col24:
-    jun_24 = st.number_input('Jun-24')
-col25, col26, col27, col28, col29, col30  = st.columns(6)
-with col25:
-    jul_24 = st.number_input('Jul-24')
-with col26:
-    ago_24 = st.number_input('Ago-24')
-with col27:
-    set_24 = st.number_input('Set-24')
-with col28:
-    out_24 = st.number_input('Out-24')
-with col29:
-    nov_24 = st.number_input('Nov-24')
-with col30:
-    dez_24 = st.number_input('Dez-24')
-
-total_orc_24 = jan_24+fev_24+mar_24+abr_24+mai_24+jun_24+jul_24+ago_24+set_24+out_24+nov_24+dez_24
-
-st.markdown("""
-    # Orçamento - 2025
-    """)
-
-col31, col32, col33, col34, col35, col36 = st.columns(6)
-with col31:
-    jan_25 = st.number_input('Jan-25')
-with col32:
-    fev_25 = st.number_input('Fev-25')
-with col33:
-    mar_25 = st.number_input('Mar-25')
-with col34:
-    abr_25 = st.number_input('Abr-25')
-with col35:
-    mai_25 = st.number_input('Mai-25')
-with col36:
-    jun_25 = st.number_input('Jun-25')
-col37, col38, col39, col40, col41, col42  = st.columns(6)
-with col37:
-    jul_25 = st.number_input('Jul-25')
-with col38:
-    ago_25 = st.number_input('Ago-25')
-with col39:
-    set_25 = st.number_input('Set-25')
-with col40:
-    out_25 = st.number_input('Out-25')
-with col41:
-    nov_25 = st.number_input('Nov-25')
-with col42:
-    dez_25 = st.number_input('Dez-25')
-
-total_orc_25 = jan_25+fev_25+mar_25+abr_25+mai_25+jun_25+jul_25+ago_25+set_25+out_25+nov_25+dez_25
-
-st.markdown("""
-    # Orçamento - 2026
-    """)
-
-col43, col44, col45, col46, col47, col48 = st.columns(6)
-with col43:
-    jan_26 = st.number_input('Jan-26')
-with col44:
-    fev_26 = st.number_input('Fev-26')
-with col45:
-    mar_26 = st.number_input('Mar-26')
-with col46:
-    abr_26 = st.number_input('Abr-26')
-with col47:
-    mai_26 = st.number_input('Mai-26')
-with col48:
-    jun_26 = st.number_input('Jun-26')
-col49, col50, col51, col52, col53, col54  = st.columns(6)
-with col49:
-    jul_26 = st.number_input('Jul-26')
-with col50:
-    ago_26 = st.number_input('Ago-26')
-with col51:
-    set_26 = st.number_input('Set-26')
-with col52:
-    out_26 = st.number_input('Out-26')
-with col53:
-    nov_26 = st.number_input('Nov-26')
-with col54:
-    dez_26 = st.number_input('Dez-26')
-
-total_orc_26 = jan_26+fev_26+mar_26+abr_26+mai_26+jun_26+jul_26+ago_26+set_26+out_26+nov_26+dez_26
-
-st.markdown("""
-    # Orçamento - 2027
-    """)
-
-col55, col56, col57, col58, col59, col60 = st.columns(6)
-with col55:
-    jan_27 = st.number_input('Jan-27')
-with col56:
-    fev_27 = st.number_input('Fev-27')
-with col57:
-    mar_27 = st.number_input('Mar-27')
-with col58:
-    abr_27 = st.number_input('Abr-27')
-with col59:
-    mai_27 = st.number_input('Mai-27')
-with col60:
-    jun_27 = st.number_input('Jun-27')
-col61, col62, col63, col64, col65, col66  = st.columns(6)
-with col61:
-    jul_27 = st.number_input('Jul-27')
-with col62:
-    ago_27 = st.number_input('Ago-27')
-with col63:
-    set_27 = st.number_input('Set-27')
-with col64:
-    out_27 = st.number_input('Out-27')
-with col65:
-    nov_27 = st.number_input('Nov-27')
-with col66:
-    dez_27 = st.number_input('Dez-27')
-
-total_orc_27 = jan_27+fev_27+mar_27+abr_27+mai_27+jun_27+jul_27+ago_27+set_27+out_27+nov_27+dez_27
-
-valor = total_orc_23+total_orc_24+total_orc_25+total_orc_26+total_orc_27
-
-# df_orc = pd.DataFrame(columns=['Nome do Projeto', 'Total Orçamento-23', 'Total Orçamento-24', 'Total Orçamento-25', 'Total Orçamento-26', 'Total Orçamento-27'])
-# new_df_orc = {"Nome do Projeto": nome_projeto, "Total Orçamento-23": float(total_orc_23), "Total Orçamento-24": float(total_orc_24), "Total Orçamento-25": float(total_orc_25), "Total Orçamento-26": float(total_orc_26), "Total Orçamento-27": float(total_orc_27)}
-# df_orc = df_orc.append(new_df_orc, ignore_index=True)
-
-#df_orc
-
-st.markdown("""
-    # :red[Custos (-)]
-    """)
-
-ct1, ct2, ct3, ct4, ct5 = st.columns(5)
-with ct1:
-    custo_23 = st.number_input('Custo Anual-23')
-with ct2:
-    custo_24 = st.number_input('Custo Anual-24')
-with ct3:
-    custo_25 = st.number_input('Custo Anual-25')
-with ct4:
-    custo_26 = st.number_input('Custo Anual-26')
-with ct5:
-    custo_27 = st.number_input('Custo Anual-27')
-
-ct6, ct7, ct8, ct9, ct10 = st.columns(5)
-with ct6:
-    custo_28 = st.number_input('Custo Anual-28')
-with ct7:
-    custo_29 = st.number_input('Custo Anual-29')
-with ct8:
-    custo_30 = st.number_input('Custo Anual-30')
-with ct9:
-    custo_31 = st.number_input('Custo Anual-31')
-with ct10:
-    custo_32 = st.number_input('Custo Anual-32')
-
-total_custo = custo_23+custo_24+custo_25+custo_26+custo_27+custo_28+custo_29+custo_30+custo_31+custo_32
-
-# df_custos = pd.DataFrame(columns=['Nome do Projeto', 'Custo Anual-23', 'Custo Anual-24', 'Custo Anual-25', 'Custo Anual-26', 'Custo Anual-27', 'Custo Anual-28', 'Custo Anual-29', 'Custo Anual-30', 'Custo Anual-31', 'Custo Anual-32'])
-# new_df_custos = {"Nome do Projeto": nome_projeto, "Custo Anual-23": float(custo_23), "Custo Anual-24": float(custo_24), "Custo Anual-25": float(custo_25), "Custo Anual-26": float(custo_26), "Custo Anual-27": float(custo_27), "Custo Anual-28": float(custo_28), "Custo Anual-29": float(custo_29), "Custo Anual-30": float(custo_30), "Custo Anual-31": float(custo_31), "Custo Anual-32": float(custo_32)}
-# df_custos = df_custos.append(new_df_custos, ignore_index=True)
-
-#df_custos
-
-st.markdown("""
-    # :green[Ganhos (+)]
-    """)
-
-gn1, gn2, gn3, gn4, gn5 = st.columns(5)
-with gn1:
-    ganhos_23 = st.number_input('Ganhos Anual-23')
-with gn2:
-    ganhos_24 = st.number_input('Ganhos Anual-24')
-with gn3:
-    ganhos_25 = st.number_input('Ganhos Anual-25')
-with gn4:
-    ganhos_26 = st.number_input('Ganhos Anual-26')
-with gn5:
-    ganhos_27 = st.number_input('Ganhos Anual-27')
+#     #valor = st.number_input('Valor do Projeto')
 
 
-gn6, gn7, gn8, gn9, gn10 = st.columns(5)
-with gn6:
-    ganhos_28 = st.number_input('Ganhos Anual-28')
-with gn7:
-    ganhos_29 = st.number_input('Ganhos Anual-29')
-with gn8:
-    ganhos_30 = st.number_input('Ganhos Anual-30')
-with gn9:
-    ganhos_31 = st.number_input('Ganhos Anual-31')
-with gn10:
-    ganhos_32 = st.number_input('Ganhos Anual-32')
+# st.markdown("""
+#     # Orçamento - 2023
+#     """)
+
+# col7, col8, col9, col10, col11, col12 = st.columns(6)
+# with col7:
+#     jan_23 = st.number_input('Jan-23')
+# with col8:
+#     fev_23 = st.number_input('Fev-23')
+# with col9:
+#     mar_23 = st.number_input('Mar-23')
+# with col10:
+#     abr_23 = st.number_input('Abr-23')
+# with col11:
+#     mai_23 = st.number_input('Mai-23')
+# with col12:
+#     jun_23 = st.number_input('Jun-23')
+# col13, col14, col15, col16, col17, col18  = st.columns(6)
+# with col13:
+#     jul_23 = st.number_input('Jul-23')
+# with col14:
+#     ago_23 = st.number_input('Ago-23')
+# with col15:
+#     set_23 = st.number_input('Set-23')
+# with col16:
+#     out_23 = st.number_input('Out-23')
+# with col17:
+#     nov_23 = st.number_input('Nov-23')
+# with col18:
+#     dez_23 = st.number_input('Dez-23')
+
+# total_orc_23 = jan_23+fev_23+mar_23+abr_23+mai_23+jun_23+jul_23+ago_23+set_23+out_23+nov_23+dez_23
+
+# st.markdown("""
+#     # Orçamento - 2024
+#     """)
+
+# col19, col20, col21, col22, col23, col24 = st.columns(6)
+# with col19:
+#     jan_24 = st.number_input('Jan-24')
+# with col20:
+#     fev_24 = st.number_input('Fev-24')
+# with col21:
+#     mar_24 = st.number_input('Mar-24')
+# with col22:
+#     abr_24 = st.number_input('Abr-24')
+# with col23:
+#     mai_24 = st.number_input('Mai-24')
+# with col24:
+#     jun_24 = st.number_input('Jun-24')
+# col25, col26, col27, col28, col29, col30  = st.columns(6)
+# with col25:
+#     jul_24 = st.number_input('Jul-24')
+# with col26:
+#     ago_24 = st.number_input('Ago-24')
+# with col27:
+#     set_24 = st.number_input('Set-24')
+# with col28:
+#     out_24 = st.number_input('Out-24')
+# with col29:
+#     nov_24 = st.number_input('Nov-24')
+# with col30:
+#     dez_24 = st.number_input('Dez-24')
+
+# total_orc_24 = jan_24+fev_24+mar_24+abr_24+mai_24+jun_24+jul_24+ago_24+set_24+out_24+nov_24+dez_24
+
+# st.markdown("""
+#     # Orçamento - 2025
+#     """)
+
+# col31, col32, col33, col34, col35, col36 = st.columns(6)
+# with col31:
+#     jan_25 = st.number_input('Jan-25')
+# with col32:
+#     fev_25 = st.number_input('Fev-25')
+# with col33:
+#     mar_25 = st.number_input('Mar-25')
+# with col34:
+#     abr_25 = st.number_input('Abr-25')
+# with col35:
+#     mai_25 = st.number_input('Mai-25')
+# with col36:
+#     jun_25 = st.number_input('Jun-25')
+# col37, col38, col39, col40, col41, col42  = st.columns(6)
+# with col37:
+#     jul_25 = st.number_input('Jul-25')
+# with col38:
+#     ago_25 = st.number_input('Ago-25')
+# with col39:
+#     set_25 = st.number_input('Set-25')
+# with col40:
+#     out_25 = st.number_input('Out-25')
+# with col41:
+#     nov_25 = st.number_input('Nov-25')
+# with col42:
+#     dez_25 = st.number_input('Dez-25')
+
+# total_orc_25 = jan_25+fev_25+mar_25+abr_25+mai_25+jun_25+jul_25+ago_25+set_25+out_25+nov_25+dez_25
+
+# st.markdown("""
+#     # Orçamento - 2026
+#     """)
+
+# col43, col44, col45, col46, col47, col48 = st.columns(6)
+# with col43:
+#     jan_26 = st.number_input('Jan-26')
+# with col44:
+#     fev_26 = st.number_input('Fev-26')
+# with col45:
+#     mar_26 = st.number_input('Mar-26')
+# with col46:
+#     abr_26 = st.number_input('Abr-26')
+# with col47:
+#     mai_26 = st.number_input('Mai-26')
+# with col48:
+#     jun_26 = st.number_input('Jun-26')
+# col49, col50, col51, col52, col53, col54  = st.columns(6)
+# with col49:
+#     jul_26 = st.number_input('Jul-26')
+# with col50:
+#     ago_26 = st.number_input('Ago-26')
+# with col51:
+#     set_26 = st.number_input('Set-26')
+# with col52:
+#     out_26 = st.number_input('Out-26')
+# with col53:
+#     nov_26 = st.number_input('Nov-26')
+# with col54:
+#     dez_26 = st.number_input('Dez-26')
+
+# total_orc_26 = jan_26+fev_26+mar_26+abr_26+mai_26+jun_26+jul_26+ago_26+set_26+out_26+nov_26+dez_26
+
+# st.markdown("""
+#     # Orçamento - 2027
+#     """)
+
+# col55, col56, col57, col58, col59, col60 = st.columns(6)
+# with col55:
+#     jan_27 = st.number_input('Jan-27')
+# with col56:
+#     fev_27 = st.number_input('Fev-27')
+# with col57:
+#     mar_27 = st.number_input('Mar-27')
+# with col58:
+#     abr_27 = st.number_input('Abr-27')
+# with col59:
+#     mai_27 = st.number_input('Mai-27')
+# with col60:
+#     jun_27 = st.number_input('Jun-27')
+# col61, col62, col63, col64, col65, col66  = st.columns(6)
+# with col61:
+#     jul_27 = st.number_input('Jul-27')
+# with col62:
+#     ago_27 = st.number_input('Ago-27')
+# with col63:
+#     set_27 = st.number_input('Set-27')
+# with col64:
+#     out_27 = st.number_input('Out-27')
+# with col65:
+#     nov_27 = st.number_input('Nov-27')
+# with col66:
+#     dez_27 = st.number_input('Dez-27')
+
+# total_orc_27 = jan_27+fev_27+mar_27+abr_27+mai_27+jun_27+jul_27+ago_27+set_27+out_27+nov_27+dez_27
+
+# valor = total_orc_23+total_orc_24+total_orc_25+total_orc_26+total_orc_27
+
+# # df_orc = pd.DataFrame(columns=['Nome do Projeto', 'Total Orçamento-23', 'Total Orçamento-24', 'Total Orçamento-25', 'Total Orçamento-26', 'Total Orçamento-27'])
+# # new_df_orc = {"Nome do Projeto": nome_projeto, "Total Orçamento-23": float(total_orc_23), "Total Orçamento-24": float(total_orc_24), "Total Orçamento-25": float(total_orc_25), "Total Orçamento-26": float(total_orc_26), "Total Orçamento-27": float(total_orc_27)}
+# # df_orc = df_orc.append(new_df_orc, ignore_index=True)
+
+# #df_orc
+
+# st.markdown("""
+#     # :red[Custos (-)]
+#     """)
+
+# ct1, ct2, ct3, ct4, ct5 = st.columns(5)
+# with ct1:
+#     custo_23 = st.number_input('Custo Anual-23')
+# with ct2:
+#     custo_24 = st.number_input('Custo Anual-24')
+# with ct3:
+#     custo_25 = st.number_input('Custo Anual-25')
+# with ct4:
+#     custo_26 = st.number_input('Custo Anual-26')
+# with ct5:
+#     custo_27 = st.number_input('Custo Anual-27')
+
+# ct6, ct7, ct8, ct9, ct10 = st.columns(5)
+# with ct6:
+#     custo_28 = st.number_input('Custo Anual-28')
+# with ct7:
+#     custo_29 = st.number_input('Custo Anual-29')
+# with ct8:
+#     custo_30 = st.number_input('Custo Anual-30')
+# with ct9:
+#     custo_31 = st.number_input('Custo Anual-31')
+# with ct10:
+#     custo_32 = st.number_input('Custo Anual-32')
+
+# total_custo = custo_23+custo_24+custo_25+custo_26+custo_27+custo_28+custo_29+custo_30+custo_31+custo_32
+
+# # df_custos = pd.DataFrame(columns=['Nome do Projeto', 'Custo Anual-23', 'Custo Anual-24', 'Custo Anual-25', 'Custo Anual-26', 'Custo Anual-27', 'Custo Anual-28', 'Custo Anual-29', 'Custo Anual-30', 'Custo Anual-31', 'Custo Anual-32'])
+# # new_df_custos = {"Nome do Projeto": nome_projeto, "Custo Anual-23": float(custo_23), "Custo Anual-24": float(custo_24), "Custo Anual-25": float(custo_25), "Custo Anual-26": float(custo_26), "Custo Anual-27": float(custo_27), "Custo Anual-28": float(custo_28), "Custo Anual-29": float(custo_29), "Custo Anual-30": float(custo_30), "Custo Anual-31": float(custo_31), "Custo Anual-32": float(custo_32)}
+# # df_custos = df_custos.append(new_df_custos, ignore_index=True)
+
+# #df_custos
+
+# st.markdown("""
+#     # :green[Ganhos (+)]
+#     """)
+
+# gn1, gn2, gn3, gn4, gn5 = st.columns(5)
+# with gn1:
+#     ganhos_23 = st.number_input('Ganhos Anual-23')
+# with gn2:
+#     ganhos_24 = st.number_input('Ganhos Anual-24')
+# with gn3:
+#     ganhos_25 = st.number_input('Ganhos Anual-25')
+# with gn4:
+#     ganhos_26 = st.number_input('Ganhos Anual-26')
+# with gn5:
+#     ganhos_27 = st.number_input('Ganhos Anual-27')
 
 
-total_ganhos = ganhos_23+ganhos_24+ganhos_25+ganhos_26+ganhos_27+ganhos_28+ganhos_29+ganhos_30+ganhos_31+ganhos_32
+# gn6, gn7, gn8, gn9, gn10 = st.columns(5)
+# with gn6:
+#     ganhos_28 = st.number_input('Ganhos Anual-28')
+# with gn7:
+#     ganhos_29 = st.number_input('Ganhos Anual-29')
+# with gn8:
+#     ganhos_30 = st.number_input('Ganhos Anual-30')
+# with gn9:
+#     ganhos_31 = st.number_input('Ganhos Anual-31')
+# with gn10:
+#     ganhos_32 = st.number_input('Ganhos Anual-32')
 
-# df_ganhos = pd.DataFrame(columns=['Nome do Projeto', 'Ganhos Anual-23', 'Ganhos Anual-24', 'Ganhos Anual-25', 'Ganhos Anual-26', 'Ganhos Anual-27', 'Ganhos Anual-28', 'Ganhos Anual-29', 'Ganhos Anual-30', 'Ganhos Anual-31', 'Ganhos Anual-32'])
-# new_df_ganhos = {"Nome do Projeto": nome_projeto, "Ganhos Anual-23": float(ganhos_23), "Ganhos Anual-24": float(ganhos_24), "Ganhos Anual-25": float(ganhos_25), "Ganhos Anual-26": float(ganhos_26), "Ganhos Anual-27": float(ganhos_27), "Ganhos Anual-28": float(ganhos_28), "Ganhos Anual-29": float(ganhos_29), "Ganhos Anual-30": float(ganhos_30), "Ganhos Anual-31": float(ganhos_31), "Ganhos Anual-32": float(ganhos_32)}
-# df_ganhos = df_ganhos.append(new_df_ganhos, ignore_index=True)
 
-#df_ganhos
+# total_ganhos = ganhos_23+ganhos_24+ganhos_25+ganhos_26+ganhos_27+ganhos_28+ganhos_29+ganhos_30+ganhos_31+ganhos_32
 
-st.markdown("""
-    # :orange[Outros Itens FCL (+)]
-    """)
+# # df_ganhos = pd.DataFrame(columns=['Nome do Projeto', 'Ganhos Anual-23', 'Ganhos Anual-24', 'Ganhos Anual-25', 'Ganhos Anual-26', 'Ganhos Anual-27', 'Ganhos Anual-28', 'Ganhos Anual-29', 'Ganhos Anual-30', 'Ganhos Anual-31', 'Ganhos Anual-32'])
+# # new_df_ganhos = {"Nome do Projeto": nome_projeto, "Ganhos Anual-23": float(ganhos_23), "Ganhos Anual-24": float(ganhos_24), "Ganhos Anual-25": float(ganhos_25), "Ganhos Anual-26": float(ganhos_26), "Ganhos Anual-27": float(ganhos_27), "Ganhos Anual-28": float(ganhos_28), "Ganhos Anual-29": float(ganhos_29), "Ganhos Anual-30": float(ganhos_30), "Ganhos Anual-31": float(ganhos_31), "Ganhos Anual-32": float(ganhos_32)}
+# # df_ganhos = df_ganhos.append(new_df_ganhos, ignore_index=True)
 
-ot1, ot2, ot3, ot4, ot5 = st.columns(5)
-with ot1:
-    outros_23 = st.number_input('Outros Itens FCL Anual-23')
-with ot2:
-    outros_24 = st.number_input('Outros Itens FCL Anual-24')
-with ot3:
-    outros_25 = st.number_input('Outros Itens FCL Anual-25')
-with ot4:
-    outros_26 = st.number_input('Outros Itens FCL Anual-26')
-with ot5:
-    outros_27 = st.number_input('Outros Itens FCL Anual-27')
+# #df_ganhos
 
-ot6, ot7, ot8, ot9, ot10 = st.columns(5)
-with ot6:
-    outros_28 = st.number_input('Outros Itens FCL Anual-28')
-with ot7:
-    outros_29 = st.number_input('Outros Itens FCL Anual-29')
-with ot8:
-    outros_30 = st.number_input('Outros Itens FCL Anual-30')
-with ot9:
-    outros_31 = st.number_input('Outros Itens FCL Anual-31')
-with ot10:
-    outros_32 = st.number_input('Outros Itens FCL Anual-32')
+# st.markdown("""
+#     # :orange[Outros Itens FCL (+)]
+#     """)
+
+# ot1, ot2, ot3, ot4, ot5 = st.columns(5)
+# with ot1:
+#     outros_23 = st.number_input('Outros Itens FCL Anual-23')
+# with ot2:
+#     outros_24 = st.number_input('Outros Itens FCL Anual-24')
+# with ot3:
+#     outros_25 = st.number_input('Outros Itens FCL Anual-25')
+# with ot4:
+#     outros_26 = st.number_input('Outros Itens FCL Anual-26')
+# with ot5:
+#     outros_27 = st.number_input('Outros Itens FCL Anual-27')
+
+# ot6, ot7, ot8, ot9, ot10 = st.columns(5)
+# with ot6:
+#     outros_28 = st.number_input('Outros Itens FCL Anual-28')
+# with ot7:
+#     outros_29 = st.number_input('Outros Itens FCL Anual-29')
+# with ot8:
+#     outros_30 = st.number_input('Outros Itens FCL Anual-30')
+# with ot9:
+#     outros_31 = st.number_input('Outros Itens FCL Anual-31')
+# with ot10:
+#     outros_32 = st.number_input('Outros Itens FCL Anual-32')
 
 
 
