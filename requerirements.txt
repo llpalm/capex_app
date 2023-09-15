@@ -4,3 +4,4 @@ numpy
 numpy_financial
 datetime
 PIL
+openpyxl
