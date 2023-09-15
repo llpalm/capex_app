@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 
 #image = Image.open('Suzano.PNG')
 
-# suporte = pd.read_excel('Analise_Fim.xlsx')
-# st.write(suporte)
+suporte = pd.read_excel('Analise_Fim.xlsx')
+#st.write(suporte)
 st.set_page_config (page_title="Modelagem Financeira Capex", layout='wide')
 #st.image(image=image)
 st.title('Análise de Viabilidade de Projeto - Capex')
@@ -17,10 +17,10 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 #st.set_page_config (page_title="Modelagem Financeira Capex" )
 st.title('Cadastro')
 
-# @st.cache_data
-# def carregar_dados():
-#         suporte = pd.read_excel("Analise_Fim.xlsx")
-#         return suporte
+@st.cache_data
+def carregar_dados():
+        suporte = pd.read_excel("Analise_Fim.xlsx")
+        return st.write(suporte)
 
 st.sidebar.success('Menu de Navegação')
 
