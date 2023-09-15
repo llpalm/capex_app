@@ -23,10 +23,10 @@ arquivo = st.file_uploader(
 )
 
 if arquivo:
-        print(arquivo.type)
-        match arquivo.type.split('/'):
-                case'application', 'json':
-                st.json(loads(arquivo.read()))
+    print(arquivo.type)
+    match arquivo.type.split('/'):
+        case 'application', 'json':
+        st.json(loads(arquivo.read()))
 
 # @st.cache_data
 # def carregar_dados():
