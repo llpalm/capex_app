@@ -20,7 +20,7 @@ st.title('Cadastro')
 @st.cache_data
 def carregar_dados():
         suporte = pd.read_excel("Analise_Fim.xlsx")
-        return st.write(suporte)
+        return suporte
 
 st.sidebar.success('Menu de Navegação')
 
