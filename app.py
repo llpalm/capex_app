@@ -21,7 +21,7 @@ arquivo = st.file_uploader(
     'Suba seu arquivo aqui!'
 )
 
-st.write(arquivo)
+st.code(arquivo.read().decode())
 # @st.cache_data
 # def carregar_dados():
 #         suporte = pd.read_excel("Analise_Fim.xlsx")
