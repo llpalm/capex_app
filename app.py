@@ -11,11 +11,11 @@ from datetime import datetime, timedelta
 suporte = pd.read_excel('Analise_Fim.xlsx')
 #st.write(suporte)
 st.set_page_config (page_title="Modelagem Financeira Capex", layout='wide')
-st.image(image=image)
+#st.image(image=image)
 st.title('Análise de Viabilidade de Projeto - Capex')
 # Configuração da página 
 #st.set_page_config (page_title="Modelagem Financeira Capex" )
-st.title('Cadastro')
+#st.title('Cadastro')
 
 st.sidebar.success('Menu de Navegação')
 
