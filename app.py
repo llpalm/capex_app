@@ -52,8 +52,8 @@ with st.form(key='Cadastrar'):
         st.write(nome_projeto, natureza)
         new_add_suporte = {'Nome do Projeto': nome_projeto, 'Natureza': natureza}
         suporte = suporte.append(new_add_suporte, ignore_index=True)
-        #st.write(suporte)
-        suporte.to_excel('Analise_Teste.xlsx', index=False)
+        st.write(suporte)
+        # suporte.to_excel('Analise_Teste.xlsx', index=False)
 
 
     #valor = st.number_input('Valor do Projeto')
