@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import numpy_financial as npf
+#import numpy_financial as npf
 from datetime import datetime, timedelta
 from PIL import Image
 
@@ -576,11 +576,11 @@ def soma():
 
     #cxd
 
-    vpl = npf.npv(0.07, cxd)
-    vpl = vpl.round(2)
+    # vpl = npf.npv(0.07, cxd)
+    # vpl = vpl.round(2)
     
-    mtir = npf.mirr(values=np.array(df_cx['Valor']), finance_rate=0.07, reinvest_rate=0.07)
-    mtir = (mtir*100).round(2)
+    # mtir = npf.mirr(values=np.array(df_cx['Valor']), finance_rate=0.07, reinvest_rate=0.07)
+    # mtir = (mtir*100).round(2)
 
 
     # def payback_of_investment(investment, cashflows):
