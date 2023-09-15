@@ -226,9 +226,9 @@ total_orc_27 = jan_27+fev_27+mar_27+abr_27+mai_27+jun_27+jul_27+ago_27+set_27+ou
 
 valor = total_orc_23+total_orc_24+total_orc_25+total_orc_26+total_orc_27
 
-df_orc = pd.DataFrame(columns=['Nome do Projeto', 'Total Orçamento-23', 'Total Orçamento-24', 'Total Orçamento-25', 'Total Orçamento-26', 'Total Orçamento-27'])
-new_df_orc = {"Nome do Projeto": nome_projeto, "Total Orçamento-23": float(total_orc_23), "Total Orçamento-24": float(total_orc_24), "Total Orçamento-25": float(total_orc_25), "Total Orçamento-26": float(total_orc_26), "Total Orçamento-27": float(total_orc_27)}
-df_orc = df_orc.append(new_df_orc, ignore_index=True)
+# df_orc = pd.DataFrame(columns=['Nome do Projeto', 'Total Orçamento-23', 'Total Orçamento-24', 'Total Orçamento-25', 'Total Orçamento-26', 'Total Orçamento-27'])
+# new_df_orc = {"Nome do Projeto": nome_projeto, "Total Orçamento-23": float(total_orc_23), "Total Orçamento-24": float(total_orc_24), "Total Orçamento-25": float(total_orc_25), "Total Orçamento-26": float(total_orc_26), "Total Orçamento-27": float(total_orc_27)}
+# df_orc = df_orc.append(new_df_orc, ignore_index=True)
 
 #df_orc
 
@@ -262,9 +262,9 @@ with ct10:
 
 total_custo = custo_23+custo_24+custo_25+custo_26+custo_27+custo_28+custo_29+custo_30+custo_31+custo_32
 
-df_custos = pd.DataFrame(columns=['Nome do Projeto', 'Custo Anual-23', 'Custo Anual-24', 'Custo Anual-25', 'Custo Anual-26', 'Custo Anual-27', 'Custo Anual-28', 'Custo Anual-29', 'Custo Anual-30', 'Custo Anual-31', 'Custo Anual-32'])
-new_df_custos = {"Nome do Projeto": nome_projeto, "Custo Anual-23": float(custo_23), "Custo Anual-24": float(custo_24), "Custo Anual-25": float(custo_25), "Custo Anual-26": float(custo_26), "Custo Anual-27": float(custo_27), "Custo Anual-28": float(custo_28), "Custo Anual-29": float(custo_29), "Custo Anual-30": float(custo_30), "Custo Anual-31": float(custo_31), "Custo Anual-32": float(custo_32)}
-df_custos = df_custos.append(new_df_custos, ignore_index=True)
+# df_custos = pd.DataFrame(columns=['Nome do Projeto', 'Custo Anual-23', 'Custo Anual-24', 'Custo Anual-25', 'Custo Anual-26', 'Custo Anual-27', 'Custo Anual-28', 'Custo Anual-29', 'Custo Anual-30', 'Custo Anual-31', 'Custo Anual-32'])
+# new_df_custos = {"Nome do Projeto": nome_projeto, "Custo Anual-23": float(custo_23), "Custo Anual-24": float(custo_24), "Custo Anual-25": float(custo_25), "Custo Anual-26": float(custo_26), "Custo Anual-27": float(custo_27), "Custo Anual-28": float(custo_28), "Custo Anual-29": float(custo_29), "Custo Anual-30": float(custo_30), "Custo Anual-31": float(custo_31), "Custo Anual-32": float(custo_32)}
+# df_custos = df_custos.append(new_df_custos, ignore_index=True)
 
 #df_custos
 
@@ -300,9 +300,9 @@ with gn10:
 
 total_ganhos = ganhos_23+ganhos_24+ganhos_25+ganhos_26+ganhos_27+ganhos_28+ganhos_29+ganhos_30+ganhos_31+ganhos_32
 
-df_ganhos = pd.DataFrame(columns=['Nome do Projeto', 'Ganhos Anual-23', 'Ganhos Anual-24', 'Ganhos Anual-25', 'Ganhos Anual-26', 'Ganhos Anual-27', 'Ganhos Anual-28', 'Ganhos Anual-29', 'Ganhos Anual-30', 'Ganhos Anual-31', 'Ganhos Anual-32'])
-new_df_ganhos = {"Nome do Projeto": nome_projeto, "Ganhos Anual-23": float(ganhos_23), "Ganhos Anual-24": float(ganhos_24), "Ganhos Anual-25": float(ganhos_25), "Ganhos Anual-26": float(ganhos_26), "Ganhos Anual-27": float(ganhos_27), "Ganhos Anual-28": float(ganhos_28), "Ganhos Anual-29": float(ganhos_29), "Ganhos Anual-30": float(ganhos_30), "Ganhos Anual-31": float(ganhos_31), "Ganhos Anual-32": float(ganhos_32)}
-df_ganhos = df_ganhos.append(new_df_ganhos, ignore_index=True)
+# df_ganhos = pd.DataFrame(columns=['Nome do Projeto', 'Ganhos Anual-23', 'Ganhos Anual-24', 'Ganhos Anual-25', 'Ganhos Anual-26', 'Ganhos Anual-27', 'Ganhos Anual-28', 'Ganhos Anual-29', 'Ganhos Anual-30', 'Ganhos Anual-31', 'Ganhos Anual-32'])
+# new_df_ganhos = {"Nome do Projeto": nome_projeto, "Ganhos Anual-23": float(ganhos_23), "Ganhos Anual-24": float(ganhos_24), "Ganhos Anual-25": float(ganhos_25), "Ganhos Anual-26": float(ganhos_26), "Ganhos Anual-27": float(ganhos_27), "Ganhos Anual-28": float(ganhos_28), "Ganhos Anual-29": float(ganhos_29), "Ganhos Anual-30": float(ganhos_30), "Ganhos Anual-31": float(ganhos_31), "Ganhos Anual-32": float(ganhos_32)}
+# df_ganhos = df_ganhos.append(new_df_ganhos, ignore_index=True)
 
 #df_ganhos
 
@@ -338,9 +338,9 @@ with ot10:
 
 total_outros_itens = outros_23+outros_24+outros_25+outros_26+outros_27+outros_28+outros_29+outros_30+outros_31+outros_32
 
-df_outros_itens = pd.DataFrame(columns=['Nome do Projeto', 'Outros Itens FCL Anual-23', 'Outros Itens FCL Anual-24', 'Outros Itens FCL Anual-25', 'Outros Itens FCL Anual-26', 'Outros Itens FCL Anual-27', 'Outros Itens FCL Anual-28', 'Outros Itens FCL Anual-29', 'Outros Itens FCL Anual-30', 'Outros Itens FCL Anual-31', 'Outros Itens FCL Anual-32'])
-new_df_outros_itens = {"Nome do Projeto": nome_projeto, "Outros Itens FCL Anual-23": float(outros_23), "Outros Itens FCL Anual-24": float(outros_24), "Outros Itens FCL Anual-25": float(outros_25), "Outros Itens FCL Anual-26": float(outros_26), "Outros Itens FCL Anual-27": float(outros_27), "Outros Itens FCL Anual-28": float(outros_28), "Outros Itens FCL Anual-29": float(outros_29), "Outros Itens FCL Anual-30": float(outros_30), "Outros Itens FCL Anual-31": float(outros_31), "Outros Itens FCL Anual-32": float(outros_32)}
-df_outros_itens = df_outros_itens.append(new_df_outros_itens, ignore_index=True)
+# df_outros_itens = pd.DataFrame(columns=['Nome do Projeto', 'Outros Itens FCL Anual-23', 'Outros Itens FCL Anual-24', 'Outros Itens FCL Anual-25', 'Outros Itens FCL Anual-26', 'Outros Itens FCL Anual-27', 'Outros Itens FCL Anual-28', 'Outros Itens FCL Anual-29', 'Outros Itens FCL Anual-30', 'Outros Itens FCL Anual-31', 'Outros Itens FCL Anual-32'])
+# new_df_outros_itens = {"Nome do Projeto": nome_projeto, "Outros Itens FCL Anual-23": float(outros_23), "Outros Itens FCL Anual-24": float(outros_24), "Outros Itens FCL Anual-25": float(outros_25), "Outros Itens FCL Anual-26": float(outros_26), "Outros Itens FCL Anual-27": float(outros_27), "Outros Itens FCL Anual-28": float(outros_28), "Outros Itens FCL Anual-29": float(outros_29), "Outros Itens FCL Anual-30": float(outros_30), "Outros Itens FCL Anual-31": float(outros_31), "Outros Itens FCL Anual-32": float(outros_32)}
+# df_outros_itens = df_outros_itens.append(new_df_outros_itens, ignore_index=True)
 
 #df_outros_itens
 
