@@ -18,8 +18,7 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 # st.title('Cadastro')
 
 arquivo = st.file_uploader(
-        'Suba seu arquivo aqui!',
-        type=['xlsx']
+        'Suba seu arquivo aqui!'
 )
 
 print(arquivo)
