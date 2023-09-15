@@ -3,10 +3,10 @@ import pandas as pd
 import numpy as np
 #import numpy_financial as npf
 from datetime import datetime, timedelta
-from PIL import Image
+#from PIL import Image
 
 
-image = Image.open('Suzano.PNG')
+#image = Image.open('Suzano.PNG')
 
 suporte = pd.read_excel(r'C:\Users\lpalmeira\Videos\Streamlit\data\Analise_Fim.xlsx')
 #st.write(suporte)
