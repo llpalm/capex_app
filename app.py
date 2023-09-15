@@ -17,10 +17,10 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 #st.set_page_config (page_title="Modelagem Financeira Capex" )
 st.title('Cadastro')
 
-@st.cache_data
-def carregar_dados():
-        suporte = pd.read_excel("Analise_Fim.xlsx")
-        return suporte
+# @st.cache_data
+# def carregar_dados():
+#         suporte = pd.read_excel("Analise_Fim.xlsx")
+#         return suporte
 
 st.sidebar.success('Menu de Navegação')
 
@@ -48,12 +48,12 @@ with st.form(key='Cadastrar'):
     beneficio = st.text_area("Beneficios", height=100)
 
     add_suporte = st.form_submit_button('Cadastrar')
-    if add_suporte:
-        #st.write(nome_projeto, natureza)
-        new_add_suporte = {'Nome do Projeto': nome_projeto, 'Natureza': natureza}
-        carregar_dados = carregar_dados.append(new_add_suporte, ignore_index=True)
-        # st.write(suporte)
-        carregar_dados.to_excel('Analise_Teste.xlsx', index=False)
+    # if add_suporte:
+    #     #st.write(nome_projeto, natureza)
+    #     new_add_suporte = {'Nome do Projeto': nome_projeto, 'Natureza': natureza}
+    #     carregar_dados = carregar_dados.append(new_add_suporte, ignore_index=True)
+    #     # st.write(suporte)
+    #     carregar_dados.to_excel('Analise_Teste.xlsx', index=False)
 
 
     #valor = st.number_input('Valor do Projeto')
