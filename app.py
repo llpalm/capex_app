@@ -9,7 +9,6 @@ from datetime import datetime, timedelta
 nome_projeto = []
 naureza_projeto = []
 valor_projeto = []
-df = pd.DataFrame(
-  nome_projeto, naureza_projeto, valor_projeto,
-  columns = ["Nome do Projeto", "Natureza", "Valor"])
+df = pd.DataFrame(zip(nome_projeto, naureza_projeto, valor_projeto),
+                  columns = ["Nome do Projeto", "Natureza", "Valor"])
 st.write(df)
