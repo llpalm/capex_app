@@ -17,7 +17,7 @@ st.write(df)
 st.set_page_config (page_title="Modelagem Financeira Capex", layout='wide')
 st.title('Análise de Viabilidade de Projeto - Capex')
 # Configuração da página 
-#st.set_page_config (page_title="Modelagem Financeira Capex" )
+st.set_page_config (page_title="Modelagem Financeira Capex" )
 st.title('Cadastro')
 
 st.sidebar.success('Menu de Navegação')
