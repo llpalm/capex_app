@@ -17,16 +17,8 @@ st.title('Análise de Viabilidade de Projeto - Capex')
 #st.set_page_config (page_title="Modelagem Financeira Capex" )
 # st.title('Cadastro')
 
-arquivo = st.file_uploader(
-    'Suba seu arquivo aqui!'
-)
-
-st.code(arquivo.read().decode())
-# @st.cache_data
-# def carregar_dados():
-#         suporte = pd.read_excel("Analise_Fim.xlsx")
-#         return suporte
-
+df = pd.read_excel("Analise_Fim.xlsx")
+st.write(df)
 #st.sidebar.success('Menu de Navegação')
 
 
