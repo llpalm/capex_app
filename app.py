@@ -5,7 +5,6 @@ import numpy as np
 from datetime import datetime, timedelta
 #from PIL import Image
 #import openpyxl
-!pip install pandas
 
 nome_projeto = []
 naureza_projeto = []
