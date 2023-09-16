@@ -15,7 +15,7 @@ df = pd.DataFrame(zip(nome_projeto, naureza_projeto, valor_projeto),
 st.write(df)
 
 #st.set_page_config (page_title="Modelagem Financeira Capex", layout='wide')
-#st.title('Análise de Viabilidade de Projeto - Capex')
+st.title('Análise de Viabilidade de Projeto - Capex')
 # Configuração da página 
 st.set_page_config (page_title="Modelagem Financeira Capex" )
 st.title('Cadastro')
