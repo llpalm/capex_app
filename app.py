@@ -21,7 +21,6 @@ df = pd.read_excel("Analise_Fim.xlsx")
 st.write(df)
 #st.sidebar.success('Menu de Navegação')
 
-
 # with st.form(key='Cadastrar'):
 #     nome_projeto = st.text_input('Nome do Projeto')
 #     col1,col2, col3 = st.columns(3)
