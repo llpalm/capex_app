@@ -6,6 +6,10 @@ from datetime import datetime, timedelta
 #from PIL import Image
 #import openpyxl
 
-df = pd.read_excel(r'C:\Users\lpalmeira\Videos\Streamlit\data\Analise_Fim.xlsx')
-
-st.title('Análise de Viabilidade de Projeto - Capex')
+nome_projeto = []
+naureza_projeto = []
+valor_projeto = []
+df = pd.DataFrame(
+  nome_projeto, naureza_projeto, valor_projeto,
+  columns = ["Nome do Projeto", "Natureza", "Valor"])
+st.write(df)
