@@ -6,6 +6,6 @@ from datetime import datetime, timedelta
 #from PIL import Image
 #import openpyxl
 
-df = pd.read_excel("Analise_Fim.xlsx")
+df = pd.read_excel(r'C:\Users\lpalmeira\Videos\Streamlit\data\Analise_Fim.xlsx')
 
 st.title('Análise de Viabilidade de Projeto - Capex')
