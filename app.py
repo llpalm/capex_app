@@ -25,7 +25,7 @@ st.sidebar.success('Menu de Navegação')
 
 with st.form(key='Cadastrar'):
     nome_projeto = st.text_input('Nome do Projeto')
-    col1,col2 = st.columns(2)
+    col1,col2 = st.columns(1)
     with col1:
         natureza = st.selectbox(label='Natureza', options=['Modernização', 'Expansão'])
     with col2:   
